@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}FAQs{% endblock %} {% block
+    content%}
+
+    <div class="faq-container">
+      <div class="faq-image">
+        <img
+          src="{{ url_for('static', filename='img/faq.png') }}"
+          alt="Pouring Drinks"
+        />
+      </div>
+      <div class="faq-text">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How to pay?</h3>
+        <p>
+          To secure your reservation at JIA, a 20% deposit of the fixed price is
+          required. Once we receive your deposit, your spot will be confirmed.
+          Remainder of payment will be collected at the end of the dinner either
+          through cash or Venmo. Deposit is non-refundable.
+        </p>
+        <h3>Where is JIA located?</h3>
+        <p>
+          JIA resides in the suburbs of Renton, WA. Upon reservation booking our
+          specific address will be disclosed.
+        </p>
+        <h3>What type of dining is a supper club?</h3>
+        <p>
+          A supper club can refer to an underground restaurant; an intimate and
+          social dining experience for foodies away from the crowds while
+          enjoying good music. While traditionally presenting multiple courses,
+          beverages, and desserts, we also rotate family-style dining, where
+          everyone at the table can partake in a shared feast together.
+        </p>
+        <h3>What is the maximum number of guests I can bring?</h3>
+        <p>
+          There are no set limitations on party size, as long as all guests can
+          comfortably fit within the designated space, considering any booking
+          restrictions for the night.
+        </p>
+        <h3>Do you offer menus for lunch?</h3>
+        <p>
+          For our private dining and catering events, we are glad to serve any
+          time of day so long as our schedules align.
+        </p>
+        <h3>Why is there a deposit to RSVP?</h3>
+        <p>
+          To ensure a seamless dining experience and optimize our preparations,
+          we tailor each dinner based on the expected number of guests.
+          Collecting a deposit helps minimize last-minute cancellations, which
+          can be disruptive and wasteful. By securing a reservation, we can
+          devote ourselves into delivering an exceptional night to those who
+          have chosen to join us.
+        </p>
+        <h3>Where can I park?</h3>
+        <p>
+          Because we are located in a residential neighborhood, we kindly
+          request that you refrain from parking in front of the neighboring
+          houses, ensuring their access remains unobstructed. Instead, there is
+          ample street parking available along a long street behind the house.
+          You can conveniently enter through the back fence gate, where a warm
+          greeting awaits you.
+        </p>
+        <h3>Do you sell alcohol/drinks?</h3>
+        <p>
+          Our dinners currently operate on a BYOB (Bring Your Own Bottle)
+          policy. However, please note that for specific dinners if drinks are
+          provided, they will be listed in the corresponding menu.
+        </p>
+        <!-- Add more questions and answers here -->
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}home{% endblock %} {% block
+    content%}
+    <section id="main-section">
+      <div class="main-content">
+        <h1>EAT HOME.</h1>
+      </div>
+    </section>
+
+    <section id="about-section">
+      <div class="content">
+        <h2>What is JIA?</h2>
+        <p>
+          JIA (家; jyah) translating to “home” in Chinese, is a house supper
+          club based in the Greater Seattle Area. JIA is not only a host to
+          regularly-changing dinner menus but also an invitation to meet new
+          friends through communal dining. Focused in Asian and New American
+          flavors, we like to keep the boundaries of cooking at a minimum. If
+          you seek a concentrated date with your community while enjoying a
+          drink, listening to good music, and eating some tasty food together,
+          our dinners are a perfect match.
+        </p>
+        <p>Eat JIA, eat home.</p>
+      </div>
+      <div class="content-container">
+        <a href="#supper-club" class="image-link">
+          <img
+            src="{{ url_for('static', filename='img/jia.png') }}"
+            alt="Polaroid Images"
+          />
+        </a>
+      </div>
+    </section>
+    <section id="gallery-preview">
+      <div class="gallery-item">
+        <a href="#gallery">
+          <img
+            src="{{ url_for('static', filename='img/dish1.png') }}"
+            alt="Dish 1"
+          />
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#gallery">
+          <img
+            src="{{ url_for('static', filename='img/dish2.png') }}"
+            alt="Dish 2"
+          />
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#gallery">
+          <img
+            src="{{ url_for('static', filename='img/dish3.png') }}"
+            alt="Dish 3"
+          />
+        </a>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+  {% endblock %}
+</html>

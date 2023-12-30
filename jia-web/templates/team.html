@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}Teams{% endblock %} {% block
+    content%}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <div id="slideshow">
+      <div class="slide active">
+        <img src="path-to-your-image1.jpg" alt="Image 1" />
+      </div>
+      <div class="slide">
+        <img src="path-to-your-image2.jpg" alt="Image 2" />
+      </div>
+      <div class="slide">
+        <img src="path-to-your-image3.jpg" alt="Image 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+
+    <div class="team-section">
+      <div class="chef-profile">
+        <img
+          src="{{ url_for('static', filename='images/jay.jpg') }}"
+          alt="Jay Yuen"
+          class="chef-image"
+        />
+        <div class="chef-info">
+          <h2>JAY YUEN, CHEF</h2>
+          <p>
+            Frying eggs since age 9, cooking family holiday feasts since 14, Jay
+            grew up in Arizona as a Chinese American being constantly obsessed
+            with food. After running a catering business in high school, Jay
+            entered the restaurant industry working Japanese cuisine full-time
+            while in university and decided his career dream then.
+            <br /><br />
+            Jumping at every opportunity to add to menu items and learn new
+            roles, he quickly progressed his way to leadership positions at a
+            young age. Jay then relocated to New York City to push further,
+            working alongside Michelin-trained chefs and adopting Korean and
+            French technique at James Beard-nominated LittleMad.
+            <br /><br />
+            Now returning to Seattle on a break from traditional restaurants,
+            Jay presents JIA as an outlet to those in the Greater Seattle Area
+            that are not only hungry for food, but hungry for connection.
+            <br /><br />
+            Find out more
+            <a href="https://instagram.com/jaycantcook" target="_blank"
+              >@jaycantcook</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="chef-profile">
+        <img
+          src="{{ url_for('static', filename='images/richard.jpg') }}"
+          alt="Richard Nguyen"
+          class="chef-image"
+        />
+        <div class="chef-info">
+          <h2>RICHARD NGUYEN, COMMIS CHEF</h2>
+          <p>
+            Born and raised in south Seattle, Richard grew up learning to
+            appreciate his Vietnamese and Chinese cultures through the mixed
+            home cooking of his mom. Helping her cook traditional dishes from
+            various regions of Vietnam since he was 10, it wasn't till 2018 that
+            Richard entered the restaurant world and began working in sushi
+            where he and Jay met. After working for 5 years, Richard joins JIA
+            to further push himself practicing different cuisines and techniques
+            while testing dishes, expanding his interest in the world of
+            culinary arts.
+          </p>
+          <p>
+            Richard's enthusiasm adds a dynamic and charismatic touch, elevating
+            the dining experience for every guest. With his commitment to
+            continuous growth and his curiosity to the craft, JIA is
+            consistently a genuine space for all people to feel welcome.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

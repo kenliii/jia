@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}Private Catering{% endblock %} {%
+    block content%}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <div class="private-dining-section">
+      <div class="private-dining-section">
+        <img
+          class="private-dining-image"
+          src="{{ url_for('static', filename='img/private.png') }}"
+          alt="Private Dining"
+        />
+      </div>
+
+      <div class="private-dining-content">
+        <h2>Private Dining Catering</h2>
+        <p>
+          Inquire with our team to book your next event. With our 6-seat marbled
+          counter or 10-seat dining room or an off-site venue, JIA can create
+          custom menus coursed or family-style to fit all of your needs.
+        </p>
+        <p>We look forward to hosting you.</p>
+        <button class="inquire-button">Inquire</button>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

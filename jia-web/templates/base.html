@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>JIA</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-logo">
+        <a href="{{ url_for('home') }}">JIA</a>
+      </h1>
+      <ul class="nav-menu right-menu">
+        <li><a href="{{ url_for('supper_club') }}">Supper Club</a></li>
+        <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
+        <li><a href="{{ url_for('team') }}">Team</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
+        <li><a href="{{ url_for('private') }}">Private Dining Catering</a></li>
+        <li>
+            <a href="https://www.instagram.com/eat.jia" target="_blank" rel="noopener noreferrer">
+              <img src="{{ url_for('static', filename='img/instagram-icon.png') }}" alt="Instagram"/>
+            </a>
+          </li>
+          
+      </ul>
+    </nav>
+
+    {% block content %}
+    <!-- This block will be overridden by child templates -->
+    {% endblock %}
+
+    <!-- Footer here if needed -->
+    <footer class="footer">
+      <div class="footer-column">
+        <h4>LOCATION</h4>
+        <p>Renton, Washington</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>JIA</h4>
+        <p>Eat home.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>CONTACT</h4>
+        <p>eatatjia@gmail.com</p>
+      </div>
+    </footer>
+  </body>
+</html>

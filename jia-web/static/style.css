@@ -1,0 +1,458 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.nav-logo {
+  margin-left: 0;
+}
+
+h1.nav-logo a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1.nav-logo a:hover {
+  color: black;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu.right-menu {
+  margin-left: auto;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #555;
+}
+
+.nav-logo {
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-column h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-column p {
+  margin: 0;
+  margin-top: 50px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-column:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-menu,
+  .right-menu {
+    display: none;
+  }
+}
+
+.nav-menu li a img {
+  height: 20px;
+}
+
+#main-section {
+  position: relative;
+  background-image: url("img/hero.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 600px 400px;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.main-content h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+#about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px;
+  width: 900px;
+  margin: auto;
+}
+
+#about-section img {
+  width: 500px; 
+  height: auto; 
+  display: block;
+  margin: 0 auto; 
+}
+
+#about-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content {
+  max-width: 600px;
+  margin-right: 50px;
+}
+
+.image-link img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  cursor: default;
+}
+
+#gallery-preview {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.gallery-item p {
+  margin-top: 5px;
+}
+
+#supper-club-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.supper-club-image {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.supper-club-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.supper-club-content {
+  max-width: 600px;
+}
+
+.supper-club-content h1 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.supper-club-content p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #supper-club-info {
+    padding: 20px;
+  }
+
+  .supper-club-image img {
+    max-width: 100%;
+  }
+  .content-container {
+    width: 100%; 
+    padding: 0 10px; 
+  }
+  .content-container img {
+    width: 100px; 
+    height: auto;
+  }
+}
+
+.reservations-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.reservations-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.reservations-content {
+  margin-top: 20px;
+}
+
+.reservations-content h2 {
+  color: #000;
+}
+
+.reservations-content p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: auto;
+}
+
+.event-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event {
+  text-align: center;
+  margin: 20px;
+}
+
+.event h3,
+.event p {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.event a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin: 10px 0;
+}
+
+.event a:hover {
+  text-decoration: underline;
+}
+
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.team-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.chef-profile {
+  display: flex;
+  margin-bottom: 20px; 
+}
+
+.chef-image {
+  width: 200px; 
+  height: auto;
+  margin-right: 50px;
+}
+
+.chef-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.chef-info h2 {
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.chef-info p {
+  margin-top: 10px; 
+}
+
+.chef-info a {
+  color: #007bff; 
+  text-decoration: none;
+}
+
+.chef-info a:hover {
+  text-decoration: underline;
+}
+
+.faq-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5; 
+}
+
+.faq-image {
+  max-width: 50%;
+  margin: 0 auto; 
+}
+
+.faq-image img {
+  width: 100%; 
+  height: auto; 
+  margin-bottom: 20px;
+  border-radius: 10px; 
+}
+
+.faq-text {
+  max-width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.private-dining-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.private-dining-image {
+  max-width: 600px; 
+  max-height: 400px; 
+  width: auto; 
+  height: auto; 
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; 
+}
+
+.private-dining-content {
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.inquire-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: #000; 
+  color: #fff; 
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.inquire-button:hover {
+  background-color: #333; 
+}
+
+.private-dining-link {
+  font-weight: bold; 
+  text-decoration: none;
+  color: black; 
+}
+
+.private-dining-link:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: black; 
+}

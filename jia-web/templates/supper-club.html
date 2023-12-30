@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %} Supper Club {% endblock %} {%
+    block content %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <section id="supper-club-info">
+      <div class="supper-club-image">
+        <img
+          src="{{ url_for('static', filename='img/supper_club_photo.png') }}"
+          alt="Supper Club Dining"
+        />
+      </div>
+      <div class="supper-club-content">
+        <h1>JIA Supper Club</h1>
+        <p>
+          Supper club dinners are hosted on Thursdays at 8pm. Our general nights
+          like to consist of exciting dishes, electro pop and R&B vibes, and
+          pleasant conversations. We are BYOB friendly. Please communicate any
+          allergies while booking.
+        </p>
+        <p>
+          Reservation forms are for our supper club menus only. For other
+          inquiries please refer to
+          <a href="{{ url_for('private') }}" class="private-dining-link"
+            >Private Dining Catering</a
+          >.
+        </p>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>
