@@ -44,7 +44,7 @@
     </section>
     <section id="gallery-preview">
       <div class="gallery-item">
-        <a href="#gallery">
+        <a href="{{ url_for('gallery') }}">
           <img
             src="{{ url_for('static', filename='img/dish1.png') }}"
             alt="Dish 1"
@@ -52,7 +52,7 @@
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#gallery">
+        <a href="{{ url_for('gallery') }}">
           <img
             src="{{ url_for('static', filename='img/dish2.png') }}"
             alt="Dish 2"
@@ -60,7 +60,7 @@
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#gallery">
+        <a href="{{ url_for('gallery') }}">
           <img
             src="{{ url_for('static', filename='img/dish3.png') }}"
             alt="Dish 3"

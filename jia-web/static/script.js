@@ -1,11 +1,10 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   let slideIndex = 0;
   showSlides();
 
   function showSlides() {
-    let i;
     let slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.opacity = "0";
     }
     slideIndex++;
@@ -21,17 +20,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     var scrollDistance = window.scrollY;
     var fadeStart = 100; // Start fade at 100px scroll distance
     var fadeUntil = 500; // End fade at 500px scroll distance
-
     var opacity = 1;
-
-    if (scrollDistance <= fadeStart) {
-      opacity = 1;
-    } else if (scrollDistance <= fadeUntil) {
+    if (scrollDistance >= fadeStart) {
       opacity = 1 - (scrollDistance - fadeStart) / (fadeUntil - fadeStart);
-    } else {
-      opacity = 0;
     }
-
+    opacity = Math.max(opacity, 0); // Ensure opacity is not negative
     mainContent.style.opacity = opacity;
+  });
+
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("is-active");
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !expanded);
   });
 });

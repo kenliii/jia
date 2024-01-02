@@ -16,23 +16,70 @@
     <title>JIA</title>
   </head>
   <body>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="navbar">
       <h1 class="nav-logo">
         <a href="{{ url_for('home') }}">JIA</a>
       </h1>
       <ul class="nav-menu right-menu">
-        <li><a href="{{ url_for('supper_club') }}">Supper Club</a></li>
-        <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
-        <li><a href="{{ url_for('team') }}">Team</a></li>
-        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
-        <li><a href="{{ url_for('private') }}">Private Dining Catering</a></li>
         <li>
-            <a href="https://www.instagram.com/eat.jia" target="_blank" rel="noopener noreferrer">
-              <img src="{{ url_for('static', filename='img/instagram-icon.png') }}" alt="Instagram"/>
-            </a>
-          </li>
-          
+          <a
+            href="{{ url_for('supper_club') }}"
+            class="{{ 'active' if active_page == 'supper-club' else '' }}"
+            >Supper Club</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('reservations') }}"
+            class="{{ 'active' if active_page == 'reservations' else '' }}"
+            >Reservations</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('team') }}"
+            class="{{ 'active' if active_page == 'team' else '' }}"
+            >Team</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('gallery') }}"
+            class="{{ 'active' if active_page == 'gallery' else '' }}"
+            >Gallery</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('faqs') }}"
+            class="{{ 'active' if active_page == 'faqs' else '' }}"
+            >FAQs</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('private') }}"
+            class="{{ 'active' if active_page == 'private' else '' }}"
+            >Private Dining Catering</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/eat.jia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="{{ url_for('static', filename='img/instagram-cion.png') }}"
+              alt="Instagram"
+            />
+          </a>
+        </li>
       </ul>
     </nav>
 
