@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='/style.css') }}"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,11 +16,6 @@
     <title>JIA</title>
   </head>
   <body>
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
     <nav class="navbar">
       <h1 class="nav-logo">
         <a href="{{ url_for('home') }}">JIA</a>
@@ -84,10 +79,9 @@
     </nav>
 
     {% block content %}
-    <!-- This block will be overridden by child templates -->
+    
     {% endblock %}
 
-    <!-- Footer here if needed -->
     <footer class="footer">
       <div class="footer-column">
         <h4>LOCATION</h4>

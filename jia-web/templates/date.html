@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="{{ url_for('static', filename='reservation.js') }}"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}date{% endblock %} {% block
+    content%}
+    <div class="info">
+      <h1>information</h1>
+      <p>please venmo  an $8 deposit fee (each person)</p>
+    </div>
+
+    <div class="reservation-container">
+      <div class="reservation-header">
+        <h2>Musang</h2>
+        <p>Indoor Reservation</p>
+        <p>Enjoy Musang and experience inside our home.</p>
+        <p>Reservation for parties of 1 to 10</p>
+        <p>Parties of 6+ require a $20 deposit per person</p>
+      </div>
+    
+      <div class="reservation-form">
+        <div class="form-group">
+          <label for="party-size">Party size</label>
+          <button type="button" class="size-adjust" id="decrease-party-size">-</button>
+          <input type="number" id="party-size" name="partySize" value="2" min="1" max="10">
+          <button type="button" class="size-adjust" id="increase-party-size">+</button>
+        </div>
+    
+        <div class="form-group">
+          <label for="reservation-date">Date</label>
+          <input type="text" id="reservation-date" name="date" placeholder="Select a date">
+        </div>
+    
+        <button type="submit" class="submit-reservation">Submit Reservation</button>
+      </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

@@ -1,5 +1,4 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, redirect, url_for, request
 app = Flask(__name__)
 
 @app.route('/')
@@ -29,6 +28,22 @@ def private():
 @app.route('/faqs')
 def faqs():
     return render_template('faqs.html', active_page='faqs')
+
+@app.route('/date')
+def date():
+    return render_template('date.html')
+
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    # Process the form data here
+    # ...
+    return redirect(url_for('thank_you'))
+
+@app.route('/thankyou')
+def thank_you():
+    # Render your thank_you.html template
+    return render_template('thankyou.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
